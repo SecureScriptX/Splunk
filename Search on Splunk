@@ -1,0 +1,46 @@
+# Search on Splunk
+
+Let's explore the Search page in Splunk. There's a wealth of information, and we'll clarify key aspects.
+
+## Traps and Tips
+
+- Field names are case-sensitive.
+- Field values are not case-sensitive.
+- The wildcard (*) is available for searches.
+- Operators such as AND, OR, NOT can be used.
+
+## Date Selection
+
+Start by selecting the data range:
+
+- **Presets:** Choose from options like today, last week, last year, last 24 hours, etc.
+- **Relative:** Specify intervals like beginning of the hour, X minutes ago, X weeks ago, etc.
+- **Real-time**
+- **Date range:** Specify between 00:00 DD/MM/YYYY and 24:00 DD/MM/YYYY.
+- **Date & time range:** Similar to date range, but with the option to choose a specific hour.
+
+## Timeline
+
+Upon executing a search, Splunk displays a Timeline.
+
+## Search Mode
+
+Three modes are available, with Smart Mode being the most commonly used.
+
+## Search Bar
+
+This is where you make your requests. Utilize wildcard characters ("*") and operators. Examples:
+
+- Search for a username starting with "Je": `Username=Je*`.
+- Find connections on a computer named "computer1": `eventid=4624 AND computername=computer1`.
+- Look for every connection on a computer excluding the domain controller: `eventid=4624 NOT computername=domaincontroller`.
+
+Don't forget to explore your "Search History."
+
+## Fields
+
+Available on the left, fields display information. Select a field to access details.
+
+## Save As
+
+In the Save As menu, save your request as a report, alert, or dashboard.
